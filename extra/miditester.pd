@@ -1,0 +1,11 @@
+#N canvas 827 239 527 327 12;
+#X obj 3 190 noteout;
+#X obj 3 4 keyboard 34 174 2 2 0 0 empty empty;
+#X listbox 62 190 9 0 0 0 - - - 0;
+#X obj 3 215 palette/piano.m~;
+#X obj 3 270 dac~;
+#X connect 1 0 0 0;
+#X connect 1 0 2 0;
+#X connect 1 0 3 0;
+#X connect 3 0 4 0;
+#X connect 3 0 4 1;

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keytag Video Player</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <video id="backgroundVideo" src="../media/synth/024-45.mp4" autoplay muted loop></video>
+  <video id="videoPlayerA" playsinline></video>
+  <video id="videoPlayerB" playsinline></video>
+  <div id="standbyScreen">⚪</div>
+  <div id="videoInfo">
+    <h2 id="videoName"></h2>
+    <p id="videoCaption"></p>
+  </div>
+  <div id="debugMenu">
+    <div>
+      <label for="masterVolume">Master Volume:</label>
+      <input type="range" id="masterVolume" min="0" max="1" step="0.01" value="1">
+    </div>
+    <div>
+      <label for="transitionCheckbox">Enable Transitions:</label>
+      <input type="checkbox" id="transitionCheckbox" checked>
+    </div>
+    <div>
+      <label for="transitionTime">Transition Time (ms):</label>
+      <input type="range" id="transitionTime" min="0" max="2000" step="1" value="1000">
+      <span id="transitionTimeValue">1000</span>
+    </div>
+    <div>
+      <label for="controlsCheckbox">Show Controls:</label>
+      <input type="checkbox" id="controlsCheckbox">
+    </div>
+    <div>
+      <label for="infoCheckbox">Show Info:</label>
+      <input type="checkbox" id="infoCheckbox">
+    </div>
+    <div>
+      <label for="midiCheckbox">Enable MIDI Input:</label>
+      <input type="checkbox" id="midiCheckbox">
+    </div>
+    <div>
+      <label for="midiDeviceSelect">MIDI Device:</label>
+      <select id="midiDeviceSelect"></select>
+    </div>
+    <div>
+      <button id="playPauseButton">Play/Pause</button>
+    </div>
+    <div>
+      <button id="fullscreenButton">Toggle Fullscreen</button>
+    </div>
+    <div>
+      <label for="waitForEndCheckbox">Wait for End:</label>
+      <input type="checkbox" id="waitForEndCheckbox">
+    </div>
+    <div id="testButtons" class="row"></div>
+    <div id="keystrokeLog"></div>
+  </div>
+  <div id="debugToggleButton">☰</div>
+  <script src="script.js"></script>
+</body>
+</html>
